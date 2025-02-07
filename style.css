@@ -1,0 +1,613 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left-section {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.profile h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile h2 {
+    font-size: 1rem;
+    color: #3498db;
+    font-weight: normal;
+}
+
+.profile h2 strong {
+    background: linear-gradient(
+        to right,
+        #3498db,  /* Xanh dương */
+        #2ecc71,  /* Xanh lá */
+        #e74c3c,  /* Đỏ */
+        #f1c40f,  /* Vàng */
+        #3498db   /* Quay lại xanh dương */
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient 8s linear infinite;
+    background-size: 400% 100%;
+    font-weight: bold;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.profile h2 {
+    display: inline-block;
+    position: relative;
+}
+
+.profile h2 strong:hover {
+    animation: gradient 3s linear infinite;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.contact-info ul {
+    list-style: none;
+}
+
+.contact-info li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-info i {
+    width: 20px;
+}
+.interests li{
+    list-style: none;
+}
+.skills, .interests, .personality {
+    margin-top: 2rem;
+}
+
+.skill-group {
+    margin-bottom: 1rem;
+}
+
+.skill-group h4 {
+    color: #3498db;
+    margin-bottom: 0.3rem;
+}
+
+.right-section {
+    padding: 2rem;
+}
+
+.objective, .experience, .education, .projects {
+    margin-bottom: 2rem;
+}
+
+.exp-header, .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.project-header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.exp-header h4, .edu-header h4 {
+    color: #2c3e50;
+}
+.project-header h4 {
+    color: #3498db;
+}
+.manager-library, 
+.manager-library strong {
+    color: #3498db !important;
+    font-weight: bold;
+}
+.exp-header span, .edu-header span, .project-header span {
+    color: #3498db;
+    font-size: 0.9rem;
+}
+.project-header span {
+    white-space: nowrap;
+}
+.exp-item li {
+    list-style: none;
+}
+.projects ul li{
+    list-style: none;
+    color: #333;
+}
+ul {
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.project-item {
+    background-color: #f8f9fa;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.demo-links {
+    background-color: #f8f9fa;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.demo-links a {
+    color: #3498db;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.demo-links a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+.project-item strong {
+    color: #2c3e50;
+}
+
+.project-item ul {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+    
+    body {
+        padding: 1rem;
+    }
+
+    .left-section {
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .project-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .project-header span {
+        margin-top: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 0.9rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Xử lý chung cho text */
+    p, li, h4, span {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
+    /* Xử lý cho URLs và links dài */
+    .demo-links a, 
+    .project-item a,
+    .contact-info a {
+        word-break: break-all;
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    /* Điều chỉnh padding và margin */
+    .project-item, 
+    .demo-links {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    /* Điều chỉnh font-size cho URLs */
+    .demo-links li,
+    .project-item li {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Xử lý cho project header */
+    .project-header h4 {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    /* Tăng khoảng cách giữa các sections */
+    .right-section > div {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Điều chỉnh layout cho tất cả các header */
+    .exp-header, .edu-header, .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    /* Đưa ngày tháng lên trên */
+    .exp-header span, .edu-header span, .project-header span {
+        order: -1;
+        margin-bottom: 0.3rem;
+        font-size: 0.85rem;
+    }
+
+    /* Điều chỉnh tiêu đề */
+    .exp-header h4, .edu-header h4, .project-header h4 {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    /* Bỏ margin-top của span vì đã dùng gap */
+    .project-header span {
+        margin-top: 0;
+    }
+
+    /* Thêm margin dưới cho header */
+    .exp-header, .edu-header, .project-header {
+        margin-bottom: 1rem;
+    }
+
+    .profile h2 strong {
+        font-size: 1rem;
+        background-size: 300% 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    .container {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .left-section, .right-section {
+        padding: 1rem;
+    }
+
+    .project-item, .demo-links {
+        padding: 0.8rem;
+    }
+
+    .contact-info li {
+        font-size: 0.9rem;
+    }
+
+    .skill-group p, .interests p, .personality p {
+        font-size: 0.9rem;
+    }
+
+    /* Điều chỉnh kích thước link để dễ click trên mobile */
+    .demo-links a, .project-item a {
+        padding: 0.3rem 0;
+        display: inline-block;
+    }
+
+    /* Cải thiện khả năng đọc trên mobile */
+    .project-item p, .objective p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* Điều chỉnh nút to-top trên mobile */
+    .totop {
+        bottom: 20px;
+        right: 20px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Điều chỉnh cho màn hình siêu nhỏ */
+@media (max-width: 320px) {
+    .profile h1 {
+        font-size: 1.2rem;
+    }
+
+    .profile h2 {
+        font-size: 0.8rem;
+    }
+
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact-info li, .skill-group p {
+        font-size: 0.85rem;
+    }
+
+    .demo-links li,
+    .project-item li,
+    .contact-info li {
+        font-size: 0.8rem;
+    }
+
+    .project-header h4 {
+        font-size: 0.9rem;
+    }
+
+    /* Giảm font size thêm cho màn hình nhỏ */
+    .exp-header h4, .edu-header h4, .project-header h4 {
+        font-size: 0.9rem;
+    }
+
+    .exp-header span, .edu-header span, .project-header span {
+        font-size: 0.8rem;
+    }
+}
+
+/* Điều chỉnh cho tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 250px 1fr;
+    }
+
+    .left-section {
+        padding: 1.5rem;
+    }
+
+    .right-section {
+        padding: 1.5rem;
+    }
+}
+
+/* Tối ưu cho màn hình lớn */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1200px;
+        grid-template-columns: 350px 1fr;
+    }
+
+    body {
+        padding: 3rem;
+    }
+
+    .profile img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* Định dạng cho tất cả các link */
+a, .project-item a, li a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover, .project-item a:hover, li a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Làm cho các link trong project-item có màu xanh */
+.project-item li {
+    color: #3498db;
+}
+
+/* Làm cho các URL trong text cũng có màu xanh */
+.project-item p strong + a,
+.project-item p:not(:has(strong)) a,
+.project-item p:contains("Link code:"),
+.project-item p:contains("Link Code:"),
+.exp-item p:contains("Liên kết:") {
+    color: #3498db;
+}
+
+/* Làm cho tất cả các liên kết trong right-section có màu xanh */
+.right-section a,
+.right-section p:contains("https://"),
+.right-section p:contains("http://"),
+.right-section li:contains("https://"),
+.right-section li:contains("http://") {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.right-section a:hover,
+.right-section p:contains("https://"):hover,
+.right-section p:contains("http://"):hover,
+.right-section li:contains("https://"):hover,
+.right-section li:contains("http://"):hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Đảm bảo các URL trong text cũng có màu xanh */
+.exp-item p,
+.project-item p,
+.project-item li {
+    color: #3498db;
+}
+
+/* Giữ màu đen cho text không phải link */
+.right-section p:not(:contains("https://")):not(:contains("http://")),
+.right-section li:not(:contains("https://")):not(:contains("http://")) {
+    color: inherit;
+}
+
+.project-header span {
+    order: -1;
+    margin-bottom: 0.5rem;
+}
+
+.project-header div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 100%;
+}
+
+.project-header div h4:last-child {
+    color: #3498db;
+    font-size: 0.95rem;
+}
+
+/* Định dạng toàn bộ thanh cuộn */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Màu nền của thanh cuộn */
+  ::-webkit-scrollbar-track {
+    background: #ecf0f1; /* Màu nền nhạt */
+    border-radius: 5px;
+  }
+  
+  /* Màu của phần kéo (thumb) */
+  ::-webkit-scrollbar-thumb {
+    background: #3498DB;
+    border-radius: 5px;
+  }
+  
+  /* Hover vào thanh kéo */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2980B9;
+  }
+/* Chỉ áp dụng cho Firefox */
+html {
+    scrollbar-color: #3498DB #ecf0f1;
+    scrollbar-width: thin;
+  }
+/* Áp dụng cho Edge cũ */
+body {
+    -ms-overflow-style: scrollbar;
+  }
+
+/* Nút to top */
+.totop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background: #3498db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.totop:hover {
+    background: #2980b9;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.totop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animation cho icon */
+.totop i {
+    transition: transform 0.3s ease;
+}
+
+.totop:hover i {
+    transform: translateY(-2px);
+}
+      
